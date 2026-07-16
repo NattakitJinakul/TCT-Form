@@ -1,6 +1,6 @@
 import { ArithStyles } from "@/src/styles/ArithStyles";
 import { useState } from "react";
-import { Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Keyboard, Text, TextInput, TouchableOpacity, TouchableWithoutFeedback, View } from "react-native";
 
 export default function Arith() {
     const [num1, setNum1] = useState("");
@@ -8,6 +8,7 @@ export default function Arith() {
     const [result, setResult] = useState("0");
 
     return (
+        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <View style={ArithStyles.container}>
             <Text style={ArithStyles.TextResult}>Result : {result}</Text>
             <View>
@@ -47,6 +48,7 @@ export default function Arith() {
 
 
         </View >
+        </TouchableWithoutFeedback>
     );
 
 }

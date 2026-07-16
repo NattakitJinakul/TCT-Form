@@ -1,36 +1,56 @@
 import { StyleSheet } from "react-native";
 
 export const CountStyle = StyleSheet.create({
-      container: {
+    container: {
         flex: 1,
-        padding: 10,
+        padding: 20,
+        justifyContent: 'center',
         backgroundColor: '#f2f6fc',
     },
-    TouchableOpacity:{
-        borderRadius: 10,
-        backgroundColor: '#00BFFF',
-        padding: 10,
-        margin: 5,
+    TouchableOpacity: {
+        borderRadius: 12,
+        backgroundColor: '#1e3a5f',
+        paddingVertical: 16,
+        margin: 6,
         alignItems: 'center',
+        shadowColor: '#1e3a5f',
+        shadowOpacity: 0.25,
+        shadowRadius: 6,
+        shadowOffset: { width: 0, height: 3 },
+        elevation: 4,
     },
-    TouchableOpacityText:{
+    TouchableOpacityText: {
         color: '#FFFFFF',
-        fontSize: 20,
+        fontSize: 24,
+        fontWeight: 'bold',
     },
-    TouchableOpacityReset:{
-        borderRadius: 10,
-        backgroundColor: '#ea0d2e',
-        padding: 10,
-        margin: 5,
+    TouchableOpacityReset: {
+        borderRadius: 12,
+        backgroundColor: '#ef4444',
+        paddingVertical: 16,
+        margin: 6,
+        marginTop: 20,
         alignItems: 'center',
+        shadowColor: '#ef4444',
+        shadowOpacity: 0.25,
+        shadowRadius: 6,
+        shadowOffset: { width: 0, height: 3 },
+        elevation: 4,
     },
-    TextCountResult:{
-        fontSize: 20,  
-        alignSelf: 'center',
-        margin : 20,
-        borderWidth: 1,
-        borderColor: '#000000',
-        padding: 10,
-        borderRadius: 5,
-    }
+    TextCountResult: {
+        fontSize: 44,
+        fontWeight: 'bold',
+        color: '#1e3a5f',
+        textAlign: 'center',
+        alignSelf: 'stretch',
+        margin: 20,
+        paddingVertical: 30,
+        backgroundColor: '#ffffff',
+        borderRadius: 16,
+        shadowColor: '#000',
+        shadowOpacity: 0.08,
+        shadowRadius: 8,
+        shadowOffset: { width: 0, height: 2 },
+        elevation: 3,
+    },
 })

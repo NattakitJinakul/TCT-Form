@@ -1,6 +1,6 @@
 import { FormStyles } from "@/src/styles/FormStyles";
 import { useState } from "react";
-import { ScrollView, Switch, Text, TextInput, View } from "react-native";
+import { Keyboard, ScrollView, Switch, Text, TextInput, TouchableWithoutFeedback, View } from "react-native";
 import { Dropdown } from "react-native-element-dropdown";
 import { RadioButton } from "react-native-paper";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -22,7 +22,8 @@ export default function Form() {
         isAgree: false
     })
     return (
-        <SafeAreaView style={FormStyles.container}>
+        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+        <SafeAreaView style={FormStyles.container} edges={['left', 'right', 'bottom']}>
             <View style={FormStyles.summaryBox}>
                 <ScrollView>
                     <Text style={FormStyles.summaryText}>Name : {data.name} </Text>
@@ -32,6 +33,12 @@ export default function Form() {
                     <Text style={FormStyles.summaryText}>Agree : {data.isAgree ? "Yes" : "No"} </Text>
                 </ScrollView>
             </View>
+            <ScrollView
+                style={FormStyles.scroll}
+                contentContainerStyle={FormStyles.scrollContent}
+                keyboardDismissMode="on-drag"
+                keyboardShouldPersistTaps="handled"
+            >
             <View style={FormStyles.section}>
                 <Text style={FormStyles.label}>NAME : </Text>
                 <TextInput
@@ -49,8 +56,8 @@ export default function Form() {
                 >
                     <Text style={FormStyles.label}>Gender:  </Text>
                     <View style={FormStyles.radio_pack}>
-                        <View style={FormStyles.radioItem}><RadioButton value="Male" /><Text>MALE</Text></View>
-                        <View style={FormStyles.radioItem}><RadioButton value="Female" /><Text>FEMALE</Text></View>
+                        <View style={FormStyles.radioItem}><RadioButton.Android value="Male" color="#1e3a5f" /><Text>MALE</Text></View>
+                        <View style={FormStyles.radioItem}><RadioButton.Android value="Female" color="#1e3a5f" /><Text>FEMALE</Text></View>
                     </View>
                 </RadioButton.Group>
             </View>
@@ -87,6 +94,8 @@ export default function Form() {
                     onValueChange={(value) => setData({ ...data, isAgree: value })}
                 />
             </View>
+            </ScrollView>
         </SafeAreaView >
+        </TouchableWithoutFeedback>
     )
 }
