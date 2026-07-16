@@ -1,0 +1,77 @@
+import { StyleSheet } from 'react-native';
+export const FormStyles = StyleSheet.create({
+    container: {
+        flex: 1,
+        padding: 10,
+        backgroundColor: '#f2f6fc',
+    },
+    summaryBox: {
+        borderRadius: 10,
+        padding: 12,
+        margin: 5,
+        backgroundColor: '#1e3a5f',
+        maxHeight: 150,
+    },
+    summaryText: {
+        fontSize: 16,
+        marginBottom: 2,
+        color: '#ffffff',
+    },
+    section: {
+        margin: 5,
+    },
+    label: {
+        fontSize: 16,
+        fontWeight: 'bold',
+        marginBottom: 5,
+        color: '#1e3a5f',
+    },
+    TextInput: {
+        borderWidth: 1,
+        borderColor: '#c5d3e8',
+        borderRadius: 8,
+        padding: 10,
+        backgroundColor: '#ffffff',
+    },
+    commentInput: {
+        borderWidth: 1,
+        borderColor: '#c5d3e8',
+        borderRadius: 8,
+        padding: 10,
+        height: 90,
+        textAlignVertical: 'top',
+        backgroundColor: '#ffffff',
+    },
+    radio_pack: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        backgroundColor: '#ffffff',
+        borderRadius: 8,
+        borderWidth: 1,
+        borderColor: '#c5d3e8',
+        padding: 5,
+    },
+    radioItem: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginRight: 15,
+    },
+    Dropdown: {
+        borderWidth: 1,
+        borderColor: '#c5d3e8',
+        borderRadius: 8,
+        padding: 10,
+        backgroundColor: '#ffffff',
+    },
+    switchRow: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        margin: 5,
+        backgroundColor: '#ffffff',
+        borderRadius: 8,
+        borderWidth: 1,
+        borderColor: '#c5d3e8',
+        padding: 10,
+    },
+});
