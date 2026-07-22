@@ -2,6 +2,7 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import { useState } from "react";
 import { Text, TouchableOpacity, View } from "react-native";
 import { CountStyle } from "../../styles/CountStyle";
+import { Colors } from '@/src/styles/colors';
 
 export default function Index() {
   const [count, setCount] = useState(0);
@@ -16,19 +17,19 @@ export default function Index() {
         <TouchableOpacity
           style={CountStyle.circleButton}
           onPress={() => setCount(count - 1)}>
-          <Ionicons name="remove" size={32} color="#ffffff" />
+          <Ionicons name="remove" size={32} color={Colors.white} />
         </TouchableOpacity>
         <TouchableOpacity
           style={CountStyle.circleButton}
           onPress={() => setCount(count + 1)}>
-          <Ionicons name="add" size={32} color="#ffffff" />
+          <Ionicons name="add" size={32} color={Colors.white} />
         </TouchableOpacity>
       </View>
 
       <TouchableOpacity
         style={CountStyle.resetButton}
         onPress={() => setCount(0)}>
-        <Ionicons name="refresh" size={18} color="#4a7a9b" />
+        <Ionicons name="refresh" size={18} color={Colors.slate} />
         <Text style={CountStyle.resetText}>RESET</Text>
       </TouchableOpacity>
     </View>

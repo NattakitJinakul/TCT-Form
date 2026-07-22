@@ -5,6 +5,7 @@ import { Keyboard, Pressable, ScrollView, Switch, Text, TextInput, TouchableOpac
 import { Dropdown } from "react-native-element-dropdown";
 import { RadioButton } from "react-native-paper";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { Colors } from '@/src/styles/colors';
 
 const initialData = {
     name: "",
@@ -17,7 +18,7 @@ const initialData = {
 function SectionLabel({ icon, text }: { icon: keyof typeof Ionicons.glyphMap, text: string }) {
     return (
         <View style={FormStyles.labelRow}>
-            <Ionicons name={icon} size={15} color="#0ea5e9" />
+            <Ionicons name={icon} size={15} color={Colors.primary} />
             <Text style={FormStyles.label}>{text}</Text>
         </View>
     );
@@ -38,7 +39,7 @@ export default function CEDForm() {
         <SafeAreaView style={FormStyles.container} edges={['left', 'right', 'bottom']}>
             <View style={FormStyles.summaryBox}>
                 <View style={FormStyles.summaryHeader}>
-                    <Ionicons name="eye" size={16} color="#7dd3fc" />
+                    <Ionicons name="eye" size={16} color={Colors.lightBlue} />
                     <Text style={FormStyles.summaryTitle}>PREVIEW</Text>
                 </View>
                 <View style={FormStyles.summaryRow}>
@@ -76,7 +77,7 @@ export default function CEDForm() {
                     value={data.name}
                     onChangeText={(text) => setData({ ...data, name: text })}
                     placeholder="Enter your name"
-                    placeholderTextColor="#7ca6c0"
+                    placeholderTextColor={Colors.muted}
                 />
             </View>
 
@@ -89,7 +90,7 @@ export default function CEDForm() {
                     >
                         <RadioButton.Android
                             value="Male"
-                            color="#0ea5e9"
+                            color={Colors.primary}
                             status={data.gender === "Male" ? "checked" : "unchecked"}
                             onPress={() => setData({ ...data, gender: "Male" })}
                         />
@@ -101,7 +102,7 @@ export default function CEDForm() {
                     >
                         <RadioButton.Android
                             value="Female"
-                            color="#0ea5e9"
+                            color={Colors.primary}
                             status={data.gender === "Female" ? "checked" : "unchecked"}
                             onPress={() => setData({ ...data, gender: "Female" })}
                         />
@@ -134,14 +135,14 @@ export default function CEDForm() {
                     value={data.comment}
                     onChangeText={(text) => setData({ ...data, comment: text })}
                     placeholder="Enter your comment"
-                    placeholderTextColor="#7ca6c0"
+                    placeholderTextColor={Colors.muted}
                 />
             </View>
 
             <View style={FormStyles.switchRow}>
                 <SectionLabel icon="shield-checkmark" text="DO YOU AGREE?" />
                 <Switch
-                    trackColor={{ true: '#0ea5e9' }}
+                    trackColor={{ true: Colors.primary }}
                     value={data.isAgree}
                     onValueChange={(value) => setData({ ...data, isAgree: value })}
                 />
@@ -150,7 +151,7 @@ export default function CEDForm() {
 
             <View style={FormStyles.button_row}>
                 <TouchableOpacity style={FormStyles.clearButton} onPress={() => setData(initialData)}>
-                    <Ionicons name="refresh" size={16} color="#4a7a9b" />
+                    <Ionicons name="refresh" size={16} color={Colors.slate} />
                     <Text style={FormStyles.clearButtonText}>RESET</Text>
                 </TouchableOpacity>
             </View>

@@ -2,6 +2,7 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import { ArithStyles } from "@/src/styles/ArithStyles";
 import { useState } from "react";
 import { Keyboard, Text, TextInput, TouchableOpacity, TouchableWithoutFeedback, View } from "react-native";
+import { Colors } from '@/src/styles/colors';
 
 type Op = "add" | "sub" | "mul" | "div";
 
@@ -69,13 +70,13 @@ export default function Arith() {
                 <TouchableOpacity
                     style={ArithStyles.addButton}
                     onPress={() => calc("add")}>
-                    <Ionicons name="add" size={18} color="#ffffff" />
+                    <Ionicons name="add" size={18} color={Colors.white} />
                     <Text style={ArithStyles.buttonText}>ADD</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={ArithStyles.subButton}
                     onPress={() => calc("sub")}>
-                    <Ionicons name="remove" size={18} color="#ffffff" />
+                    <Ionicons name="remove" size={18} color={Colors.white} />
                     <Text style={ArithStyles.buttonText}>SUB</Text>
                 </TouchableOpacity>
             </View>
@@ -83,7 +84,7 @@ export default function Arith() {
                 <TouchableOpacity
                     style={ArithStyles.mulButton}
                     onPress={() => calc("mul")}>
-                    <Ionicons name="close" size={18} color="#ffffff" />
+                    <Ionicons name="close" size={18} color={Colors.white} />
                     <Text style={ArithStyles.buttonText}>MUL</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
@@ -96,7 +97,7 @@ export default function Arith() {
                 <TouchableOpacity
                     style={ArithStyles.resetButton}
                     onPress={reset}>
-                    <Ionicons name="refresh" size={18} color="#ffffff" />
+                    <Ionicons name="refresh" size={18} color={Colors.white} />
                     <Text style={ArithStyles.buttonText}>RESET</Text>
                 </TouchableOpacity>
             </View>

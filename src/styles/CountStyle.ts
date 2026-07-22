@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { Colors } from './colors';
 
 export const CountStyle = StyleSheet.create({
     container: {
@@ -6,16 +7,16 @@ export const CountStyle = StyleSheet.create({
         padding: 24,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#f0f9ff',
+        backgroundColor: Colors.background,
     },
     card: {
         alignSelf: 'stretch',
         alignItems: 'center',
         paddingVertical: 44,
         marginBottom: 36,
-        backgroundColor: '#ffffff',
+        backgroundColor: Colors.white,
         borderRadius: 28,
-        shadowColor: '#0ea5e9',
+        shadowColor: Colors.primary,
         shadowOpacity: 0.15,
         shadowRadius: 16,
         shadowOffset: { width: 0, height: 8 },
@@ -25,16 +26,16 @@ export const CountStyle = StyleSheet.create({
         fontSize: 13,
         fontWeight: '700',
         letterSpacing: 3,
-        color: '#7ca6c0',
+        color: Colors.muted,
         marginBottom: 6,
     },
     cardValue: {
         fontSize: 72,
         fontWeight: '800',
-        color: '#0c4a6e',
+        color: Colors.dark,
     },
     cardValueNegative: {
-        color: '#ef4444',
+        color: Colors.danger,
     },
     button_row: {
         flexDirection: 'row',
@@ -45,10 +46,10 @@ export const CountStyle = StyleSheet.create({
         width: 84,
         height: 84,
         borderRadius: 42,
-        backgroundColor: '#0ea5e9',
+        backgroundColor: Colors.primary,
         alignItems: 'center',
         justifyContent: 'center',
-        shadowColor: '#0ea5e9',
+        shadowColor: Colors.primary,
         shadowOpacity: 0.35,
         shadowRadius: 10,
         shadowOffset: { width: 0, height: 5 },
@@ -61,12 +62,12 @@ export const CountStyle = StyleSheet.create({
         paddingVertical: 12,
         paddingHorizontal: 28,
         borderRadius: 999,
-        backgroundColor: '#ffffff',
+        backgroundColor: Colors.white,
         borderWidth: 1,
-        borderColor: '#bae6fd',
+        borderColor: Colors.border,
     },
     resetText: {
-        color: '#4a7a9b',
+        color: Colors.slate,
         fontSize: 14,
         fontWeight: '700',
         letterSpacing: 1,
