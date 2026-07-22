@@ -23,7 +23,7 @@ function SectionLabel({ icon, text }: { icon: keyof typeof Ionicons.glyphMap, te
     );
 }
 
-export default function Form() {
+export default function CEDForm() {
     const depts = [
         { text: 'Civil Engineering', value: 'CE', index: 1 },
         { text: 'Computer Education', value: 'CED', index: 2 },

@@ -48,10 +48,10 @@ export default function TabLayout() {
           ),
         }}
       />
-      <Tabs.Screen name='Form'
+      <Tabs.Screen name='CED_Form'
         options={{
-          title: 'Form',
-          tabBarLabel: "Form",
+          title: 'CED Form',
+          tabBarLabel: "CED Form",
           tabBarIcon: ({ color, size }) => (
             <Ionicons name='list' size={size} color={color} />
           ),
